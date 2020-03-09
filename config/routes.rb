@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'gardens#index'
+  root to: 'gardens#index', as:  '/'
 
   resources :gardens, only: [:index, :show, :new, :create] do
     resources :plants, only: [:create]
